@@ -97,3 +97,41 @@ export const Component = styled.div`
     line-height: normal;
   }
 `;
+
+export const Nav = styled.div`
+  display: flex;
+  width: 393px;
+  height: 65px;
+  padding: 10px 43px;
+  flex-direction: row;
+  gap: 10px;
+  background: #fff;
+  justify-content: space-between;
+  align-items: end;
+  position: fixed;
+  bottom: 0;
+  margin-left: 0;
+  z-index: 1000; /* 다른 요소 위에 보이도록 */
+`;
+
+export const Comp = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+
+  img {
+    width: 29px;
+    height: 29px;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+  }
+
+  div {
+    color: #002159;
+    font-family: "Gmarket Sans TTF";
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+  }
+`;

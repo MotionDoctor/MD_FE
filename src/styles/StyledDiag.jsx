@@ -19,101 +19,106 @@ export const Container = styled.div`
 
 export const Header = styled.div`
   display: flex;
-  height: 88px;
-  padding: 0 63px;
-  justify-content: center;
+  height: 60px;
+  padding: 9px 6px;
+  flex-direction: row;
   align-items: center;
+  gap: 101px;
+  flex-shrink: 0;
   align-self: stretch;
   background: #002159;
-  color: #fff;
-  leading-trim: both;
-  text-edge: cap;
-  font-family: "Gmarket Sans TTF";
-  font-size: 30px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 89px; /* 296.667% */
-`;
+  margin-bottom: 22px;
 
-export const Mention = styled.div`
-  color: #002159;
-  text-align: center;
-  leading-trim: both;
-  text-edge: cap;
-  font-family: "Gmarket Sans TTF";
-  font-size: 25px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 33px; /* 132% */
-  margin-top: 80px;
-  margin-bottom: 11px;
+  img {
+    width: 41px;
+    height: 41px;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+  }
+
+  #detail {
+    color: #fff;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: "Gmarket Sans TTF";
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 89px; /* 342.308% */
+  }
 `;
 
 export const Btn = styled.div`
+  margin-top: 40px;
   display: flex;
-  width: 289px;
-  padding: 16px 20px;
-  flex-direction: column;
+  height: 220px;
+  padding: 0 20px;
+  flex-direction: row;
   align-items: center;
-  gap: 8px;
+  justify-content: space-between;
+  width: 333px;
+  height: 180px;
   border-radius: 20px;
   background: #fff;
   box-shadow: 4.251px 25.503px 42.505px 0 rgba(90, 117, 167, 0.04);
-  margin-top: 64px;
+
+  #img1 {
+    width: 140px;
+    height: 140px;
+    aspect-ratio: 1/1;
+  }
+
+  #img2 {
+    width: 130px;
+    height: 130px;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+  }
 `;
 
 export const Det = styled.div`
   display: flex;
-  flex-direction: row;
-  gap: 12px;
-  align-items: center;
-  justify-content: center;
-  height: 87px;
-
-  #diag {
-    width: 87px;
-    height: 87px;
-    aspect-ratio: 1/1;
-  }
-
-  #reserv {
-    width: 70px;
-    height: 105px;
-    aspect-ratio: 2/3;
-  }
+  flex-direction: column;
+  align-items: start;
+  width: 145px;
+  justify-content: space-between;
+  height: 140px;
 `;
 
 export const Text = styled.div`
   display: flex;
   flex-direction: column;
-  // gap: 8px;
+  gap: 12px;
 
-  #title {
+  #name {
     color: #002159;
     font-family: "Gmarket Sans TTF";
-    font-size: 28px;
+    font-size: 17px;
     font-style: normal;
     font-weight: 700;
+    line-height: normal;
+    text-align: left;
   }
 
   #detail {
     color: #002159;
     font-family: "Gmarket Sans TTF";
-    font-size: 16px;
+    font-size: 12px;
     font-style: normal;
     font-weight: 500;
+    line-height: 20px; /* 133.333% */
+    text-align: left;
   }
 `;
 
-export const Go = styled.div`
+export const Button = styled.div`
+  width: 145px;
   display: flex;
-  padding: 13px;
+  height: 34px;
+  padding: 10px 28px;
   flex-direction: row;
   align-items: center;
-  justify-content: center;
-  gap: 10px;
-  width: 249px;
-  height: 42px;
+  gap: 6px;
   border-radius: 10px;
   background: #002159;
 
@@ -121,17 +126,15 @@ export const Go = styled.div`
     color: #fff;
     text-align: center;
     font-family: "Gmarket Sans TTF";
-    font-size: 18px;
+    font-size: 15px;
     font-style: normal;
     font-weight: 700;
-    line-height: 55px; /* 305.556% */
     margin-top: 2px;
   }
 
   img {
-    margin-left: 4px;
-    width: 27px;
-    height: 13px;
+    width: 21px;
+    height: 9.5px;
   }
 `;
 

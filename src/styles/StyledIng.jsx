@@ -4,111 +4,89 @@ export const Container = styled.div`
   position: relative;
   margin: 0 auto;
   margin-top: 0px;
-  height: 100vh;
+  min-height: 100dvh;
   padding: 0; /* 불필요한 패딩 제거 */
   box-sizing: border-box; /* 패딩이 width에 포함되도록 설정 */
   display: flex;
   flex-direction: column;
   width: 100%;
   max-width: 393px;
-  min-width: 320px;
   flex-shrink: 0;
-  overflow: visible;
   align-items: center;
   background: #eef2f7;
+  padding-bottom: 150px;
 `;
 
 export const Header = styled.div`
   display: flex;
   height: 60px;
   padding: 9px 6px;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  gap: 10px;
+  gap: 108px;
+  flex-shrink: 0;
   align-self: stretch;
   background: #002159;
+
+  img {
+    width: 41px;
+    height: 41px;
+    flex-shrink: 0;
+    aspect-ratio: 1/1;
+  }
+
+  #detail {
+    color: #fff;
+    leading-trim: both;
+    text-edge: cap;
+    font-family: "Gmarket Sans TTF";
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 89px; /* 342.308% */
+  }
 `;
 
 export const Title = styled.div`
-  display: flex;
-  align-items: center;
-
-  color: #fff;
-  leading-trim: both;
-  text-edge: cap;
+  color: #000;
   font-family: "Gmarket Sans TTF";
-  font-size: 26px;
+  font-size: 30px;
   font-style: normal;
   font-weight: 700;
-  line-height: 89px; /* 342.308% */
+  line-height: normal;
+  margin-top: 55px;
+  width: 323px;
+  text-align: left;
 `;
 
-export const Icons = styled.div`
-  display: flex;
-  position: absolute;
-  gap: 20px;
-  align-items: center;
-  left: 10px;
+export const Img = styled.div`
+  margin-top: 35px;
+  height: 339px;
+  width: 323px;
+  aspect-ratio: 323/339;
+  background-color: #232323;
 `;
 
-export const Content = styled.div`
-  width: 100%;
+export const Box = styled.div`
+  margin-top: 50px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  padding: 21px;
   justify-content: center;
-  flex: 1;
-  gap: 90px;
-`;
-
-export const Component = styled.div`
-  display: flex;
-  width: 300px;
-  padding: 24px;
-  flex-direction: column;
-  gap: 10px;
+  align-items: center;
+  width: 323px;
   border-radius: 20px;
   background: #fff;
   box-shadow: 5.039px 30.233px 50.388px 0 rgba(90, 117, 167, 0.04);
 
-  #discription {
-    align-self: stretch;
-    color: #8696bb;
+  div {
+    color: #000;
     font-family: "Gmarket Sans TTF";
-    font-size: 10px;
+    font-size: 18px;
     font-style: normal;
-    font-weight: 700;
-    line-height: normal;
+    font-weight: 500;
+    line-height: 40px; /* 200% */
   }
 `;
-
-export const C_title = styled.div`
-  color: #000;
-  font-family: "Gmarket Sans TTF";
-  font-size: 25px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-`;
-
-export const C_btn = styled.div`
-  display: flex;
-  padding: 8px;
-  justify-content: center;
-  align-items: center;
-  align-self: stretch;
-  border-radius: 10px;
-  background: rgba(99, 180, 255, 0.1);
-
-  color: #4894fe;
-  font-family: "Gmarket Sans TTF";
-  font-size: 15px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 110%; /* 16.5px */
-`;
-
-export const Discription_Wrapper = styled.div``;
 
 export const Nav = styled.div`
   display: flex;
