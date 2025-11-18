@@ -71,14 +71,48 @@ export const Component = styled.div`
   background: #fff;
   box-shadow: 5.039px 30.233px 50.388px 0 rgba(90, 117, 167, 0.04);
 
-  #btn {
-    display: flex;
-    padding: 8px;
-    justify-content: center;
-    align-items: center;
+  #discription {
     align-self: stretch;
-    border-radius: 10px;
-    background: rgba(99, 180, 255, 0.1);
+    color: #8696bb;
+    font-family: "Gmarket Sans TTF";
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+  }
+`;
+
+export const C_title = styled.div`
+  color: #000;
+  font-family: "Gmarket Sans TTF";
+  font-size: 25px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+`;
+
+export const C_sub = styled.div`
+  color: #8696bb;
+  font-family: "Gmarket Sans TTF";
+  font-size: 45px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+`;
+
+export const C_wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
+
+export const C_btn = styled.div`
+  display: flex;
+  padding: 8px;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  border-radius: 10px;
+  background: rgba(99, 180, 255, 0.1);
 
     color: #4894fe;
     font-family: "Gmarket Sans TTF";

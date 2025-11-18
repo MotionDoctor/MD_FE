@@ -58,7 +58,7 @@ export const Content = styled.div`
   align-items: center;
   justify-content: center;
   flex: 1;
-  gap: 90px;
+  gap: 42px;
 `;
 
 export const Component = styled.div`
@@ -91,6 +91,39 @@ export const C_title = styled.div`
   line-height: normal;
 `;
 
+export const C_sub = styled.div`
+  color: #8696bb;
+  font-family: "Gmarket Sans TTF";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+`;
+
+export const C_wrapper = styled.div`
+  display: flex;
+  margin-top: 25px;
+  justify-content: space-between;
+`;
+
+export const C_inform = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+  color: #8696bb;
+  font-family: "Gmarket Sans TTF";
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+
+  img {
+    width: 16px;
+    height: 16px;
+  }
+`;
+
 export const C_btn = styled.div`
   display: flex;
   padding: 8px;
@@ -108,42 +141,9 @@ export const C_btn = styled.div`
   line-height: 110%; /* 16.5px */
 `;
 
-export const Discription_Wrapper = styled.div``;
-
-export const Nav = styled.div`
-  display: flex;
-  width: 393px;
-  height: 65px;
-  padding: 10px 43px;
-  flex-direction: row;
-  gap: 10px;
-  background: #fff;
-  justify-content: space-between;
-  align-items: end;
-  position: fixed;
-  bottom: 0;
-  margin-left: 0;
-  z-index: 1000; /* 다른 요소 위에 보이도록 */
-`;
-
-export const Comp = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-  align-items: center;
-
-  img {
-    width: 29px;
-    height: 29px;
-    flex-shrink: 0;
-    aspect-ratio: 1/1;
-  }
-
-  div {
-    color: #002159;
-    font-family: "Gmarket Sans TTF";
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 700;
-  }
+export const Divider = styled.div`
+  width: 100%;
+  height: 2px;
+  background: #f5f5f5;
+  margin: 5px 0;
 `;
