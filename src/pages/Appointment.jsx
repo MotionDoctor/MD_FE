@@ -9,22 +9,44 @@ const Appointment = () => {
     <R.Container>
       <R.Header>
         <R.Icons>
-          <img id="back" src={`${process.env.PUBLIC_URL}/images/back.svg`} alt="back" onClick={() => navigate("/MainPage")} />
+          <img
+            id="back"
+            src={`${process.env.PUBLIC_URL}/images/Back.svg`}
+            alt="back"
+            onClick={() => navigate("/home")}
+          />
         </R.Icons>
         <R.Title>예약선택</R.Title>
       </R.Header>
 
       <R.Content>
         <R.Component>
-          <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", width: "100%" }}>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              width: "100%",
+            }}
+          >
             <div id="title">병원예약</div>
-            <img src={`${process.env.PUBLIC_URL}/images/Hospital.svg`} alt="hospital" />
+            <img
+              src={`${process.env.PUBLIC_URL}/images/Hospital.svg`}
+              alt="hospital"
+            />
           </div>
 
           <div id="btn">예약하기</div>
         </R.Component>
         <R.Component>
-          <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", width: "100%" }}>
+          <div
+            style={{
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "space-between",
+              width: "100%",
+            }}
+          >
             <div id="title">교통예약</div>
             <img src={`${process.env.PUBLIC_URL}/images/Bus.svg`} alt="bus" />
           </div>
