@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import * as I from "../styles/StyledIng";
 import { useNavigate } from "react-router-dom";
 
@@ -9,7 +9,15 @@ const Ing = () => {
   const goHome = () => navigate(`/home`);
   const goBack = () => navigate(-1);
   const goMy = () => navigate(`/my`);
-  const goDiag = () => navigate(`/dianosis`);
+  const goDiag = () => navigate(`/diagnosis`);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      navigate(`/diagnosis/result`);
+    }, 4000); // 4초
+
+    return () => clearTimeout(timer); // 컴포넌트 언마운트 시 타이머 정리
+  }, []);
 
   return (
     <I.Container>

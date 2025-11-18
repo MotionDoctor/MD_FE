@@ -9,7 +9,7 @@ const Result = () => {
   const goHome = () => navigate(`/home`);
   const goBack = () => navigate(-1);
   const goMy = () => navigate(`/my`);
-  const goDiag = () => navigate(`/dianosis`);
+  const goDiag = () => navigate(`/diagnosis`);
 
   const [open, setOpen] = useState(false);
 
