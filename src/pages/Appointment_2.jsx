@@ -1,8 +1,8 @@
 import React from "react";
-import * as A from "../styles/StyledAppointment";
+import * as A from "../styles/StyledAppointment2";
 import { useNavigate } from "react-router-dom";
 
-const Appointment = () => {
+const Appointment_2 = () => {
   const navigate = useNavigate();
 
   const goHos = () => navigate(`/hospital`);
@@ -21,38 +21,18 @@ const Appointment = () => {
 
       <A.Content>
         <A.Component>
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-              width: "100%",
-            }}
-          >
-            <A.C_title id="title">병원예약</A.C_title>
-            <img src={`${process.env.PUBLIC_URL}/images/Hospital.svg`} alt="hospital" />
-          </div>
-
-          <A.C_btn id="btn" onClick={goHos}>
-            예약하기
-          </A.C_btn>
+          <A.C_title>
+            경북대학교병원
+            <div id="sub">정형외과</div>
+          </A.C_title>
+          <A.Divider />
+          <A.Info_wrapper>
+            <A.Info>위치: 대구광역시 중구 동덕로 130</A.Info>
+            <A.Info>예약 날짜: 9월 20일</A.Info>
+            <A.Info>진료가능시간: 오전 10시 ~ 12시</A.Info>
+          </A.Info_wrapper>
         </A.Component>
-
-        <A.Component>
-          <div
-            style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "space-between",
-              width: "100%",
-            }}
-          >
-            <A.C_title id="title">교통예약</A.C_title>
-            <img src={`${process.env.PUBLIC_URL}/images/Bus.svg`} alt="bus" />
-          </div>
-
-          <A.C_btn id="btn">예약하기</A.C_btn>
-        </A.Component>
+        <A.C_btn>병원 예약하기</A.C_btn>
       </A.Content>
 
       <A.Nav>
@@ -77,4 +57,4 @@ const Appointment = () => {
   );
 };
 
-export default Appointment;
+export default Appointment_2;

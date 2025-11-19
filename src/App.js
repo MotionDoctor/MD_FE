@@ -9,6 +9,8 @@ import Diag from "./pages/Diag";
 import My from "./pages/My";
 import Ing from "./pages/Ing";
 import Result from "./pages/Result";
+import Appointment_2 from "./pages/Appointment_2";
+import Hospital_Success from "./pages/Hospital_success";
 
 function App() {
   return (
@@ -16,10 +18,12 @@ function App() {
       <GlobalStyle />
       <Routes>
         <Route path="/appointment" element={<Appointment />} />
+        <Route path="/appointment/hospital" element={<Hospital />} />
+        <Route path="/appointment/hospital/check" element={<Appointment_2 />} />
+        <Route path="/appointment/hospital/success" element={<Hospital_Success />} />
         <Route path="/home" element={<Main />} />
         <Route path="/" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
-        <Route path="/hospital" element={<Hospital />} />
         <Route path="/diagnosis" element={<Diag />} />
         <Route path="/my" element={<My />} />
         <Route path="/diagnosis/ing" element={<Ing />} />

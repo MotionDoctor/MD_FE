@@ -58,94 +58,74 @@ export const Content = styled.div`
   align-items: center;
   justify-content: center;
   flex: 1;
-  gap: 42px;
+  gap: 70px;
 `;
 
 export const Component = styled.div`
   display: flex;
-  width: 300px;
-  padding: 24px;
+  width: 283px;
+  padding: 35px 20px;
   flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
   gap: 10px;
   border-radius: 20px;
   background: #fff;
   box-shadow: 5.039px 30.233px 50.388px 0 rgba(90, 117, 167, 0.04);
-
-  #discription {
-    align-self: stretch;
-    color: #8696bb;
-    font-family: "Gmarket Sans TTF";
-    font-size: 10px;
-    font-style: normal;
-    font-weight: 700;
-    line-height: normal;
-  }
 `;
 
 export const C_title = styled.div`
   color: #000;
   font-family: "Gmarket Sans TTF";
-  font-size: 25px;
+  font-size: 30px;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-`;
 
-export const C_sub = styled.div`
-  color: #8696bb;
-  font-family: "Gmarket Sans TTF";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-`;
-
-export const C_wrapper = styled.div`
-  display: flex;
-  margin-top: 25px;
-  justify-content: space-between;
-`;
-
-export const C_inform = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 3px;
-  color: #8696bb;
-  font-family: "Gmarket Sans TTF";
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: normal;
-
-  img {
-    width: 16px;
-    height: 16px;
+  #sub {
+    color: #8696bb;
+    font-family: "Gmarket Sans TTF";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
   }
 `;
 
 export const C_btn = styled.div`
   display: flex;
-  padding: 8px;
+  width: 283px;
+  height: 64px;
+  padding: 15px 74px;
   justify-content: center;
   align-items: center;
-  align-self: stretch;
+  gap: 10px;
   border-radius: 10px;
   background: rgba(99, 180, 255, 0.1);
 
   color: #4894fe;
   font-family: "Gmarket Sans TTF";
-  font-size: 15px;
+  font-size: 22px;
   font-style: normal;
   font-weight: 700;
-  line-height: 110%; /* 16.5px */
+  line-height: 110%; /* 24.2px */
+`;
+
+export const Info_wrapper = styled.div``;
+
+export const Info = styled.div`
+  color: #000;
+  font-family: "Gmarket Sans TTF";
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 34px;
 `;
 
 export const Divider = styled.div`
   width: 100%;
   height: 2px;
   background: #f5f5f5;
-  margin: 5px 0;
 `;
 
 export const Nav = styled.div`
