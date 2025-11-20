@@ -52,7 +52,7 @@ const Complete_T = () => {
 
         <div style={{ display: "flex", gap: "14px", marginTop: "90px" }}>
           <T.btn1 onClick={() => navigate(`/appointment/hospital`)}>병원 예약하기</T.btn1>
-          <T.btn2>신청확정</T.btn2>
+          <T.btn2 onClick={goMy}>신청확정</T.btn2>
         </div>
       </T.Content>
 

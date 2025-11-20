@@ -16,7 +16,6 @@ const Hospital = () => {
       <H.Header>
         <H.Icons>
           <img id="back" src={`${process.env.PUBLIC_URL}/images/Back.svg`} alt="back" onClick={goBack} />
-          <img id="back" src={`${process.env.PUBLIC_URL}/images/Back.svg`} alt="back" onClick={goBack} />
         </H.Icons>
         <H.Title>병원선택</H.Title>
       </H.Header>
