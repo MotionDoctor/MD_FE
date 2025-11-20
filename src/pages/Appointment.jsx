@@ -9,13 +9,13 @@ const Appointment = () => {
   const goHome = () => navigate(`/home`);
   const goBack = () => navigate(-1);
   const goMy = () => navigate(`/my`);
-  const goTransport = () => navigate(`transport`);
+  const goTransport = () => navigate(`/appointment/transport`);
 
   return (
     <A.Container>
       <A.Header>
         <A.Icons>
-          <img id="back" src={`${process.env.PUBLIC_URL}/images/back.svg`} alt="back" onClick={goBack} />
+          <img id="back" src={`${process.env.PUBLIC_URL}/images/Back.svg`} alt="back" onClick={goBack} />
         </A.Icons>
         <A.Title>예약선택</A.Title>
       </A.Header>

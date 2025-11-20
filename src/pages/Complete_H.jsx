@@ -14,7 +14,7 @@ const Complete_H = () => {
     <C.Container>
       <C.Header>
         <C.Icons>
-          <img id="back" src={`${process.env.PUBLIC_URL}/images/back.svg`} alt="back" onClick={goBack} />
+          <img id="back" src={`${process.env.PUBLIC_URL}/images/Back.svg`} alt="back" onClick={goBack} />
         </C.Icons>
         <C.Title>예약선택</C.Title>
       </C.Header>

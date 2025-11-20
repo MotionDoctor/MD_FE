@@ -15,7 +15,7 @@ const Complete_T = () => {
     <T.Container>
       <T.Header>
         <T.Icons>
-          <img id="back" src={`${process.env.PUBLIC_URL}/images/back.svg`} alt="back" onClick={goBack} />
+          <img id="back" src={`${process.env.PUBLIC_URL}/images/Back.svg`} alt="back" onClick={goBack} />
         </T.Icons>
         <T.Title>예약선택</T.Title>
       </T.Header>

@@ -15,12 +15,8 @@ const Hospital = () => {
     <H.Container>
       <H.Header>
         <H.Icons>
-          <img
-            id="back"
-            src={`${process.env.PUBLIC_URL}/images/Back.svg`}
-            alt="back"
-            onClick={goBack}
-          />
+          <img id="back" src={`${process.env.PUBLIC_URL}/images/Back.svg`} alt="back" onClick={goBack} />
+          <img id="back" src={`${process.env.PUBLIC_URL}/images/Back.svg`} alt="back" onClick={goBack} />
         </H.Icons>
         <H.Title>병원선택</H.Title>
       </H.Header>
@@ -31,19 +27,11 @@ const Hospital = () => {
           <H.C_sub>정형외과</H.C_sub>
           <H.C_wrapper>
             <H.C_inform>
-              <img
-                id="clock"
-                src={`${process.env.PUBLIC_URL}/images/Clock.svg`}
-                alt="back"
-              />
+              <img id="clock" src={`${process.env.PUBLIC_URL}/images/Clock.svg`} alt="back" />
               9월 20일
             </H.C_inform>
             <H.C_inform>
-              <img
-                id="clock"
-                src={`${process.env.PUBLIC_URL}/images/Calendar.svg`}
-                alt="back"
-              />
+              <img id="clock" src={`${process.env.PUBLIC_URL}/images/Calendar.svg`} alt="back" />
               10:00 - 12:00 AM
             </H.C_inform>
           </H.C_wrapper>
@@ -58,19 +46,11 @@ const Hospital = () => {
           <H.C_sub>재활의학과</H.C_sub>
           <H.C_wrapper>
             <H.C_inform>
-              <img
-                id="clock"
-                src={`${process.env.PUBLIC_URL}/images/Clock.svg`}
-                alt="back"
-              />
+              <img id="clock" src={`${process.env.PUBLIC_URL}/images/Clock.svg`} alt="back" />
               9월 20일
             </H.C_inform>
             <H.C_inform>
-              <img
-                id="clock"
-                src={`${process.env.PUBLIC_URL}/images/Calendar.svg`}
-                alt="back"
-              />
+              <img id="clock" src={`${process.env.PUBLIC_URL}/images/Calendar.svg`} alt="back" />
               10:00 - 12:00 AM
             </H.C_inform>
           </H.C_wrapper>
@@ -83,19 +63,11 @@ const Hospital = () => {
           <H.C_sub>가정의학과</H.C_sub>
           <H.C_wrapper>
             <H.C_inform>
-              <img
-                id="clock"
-                src={`${process.env.PUBLIC_URL}/images/Clock.svg`}
-                alt="back"
-              />
+              <img id="clock" src={`${process.env.PUBLIC_URL}/images/Clock.svg`} alt="back" />
               9월 27일
             </H.C_inform>
             <H.C_inform>
-              <img
-                id="clock"
-                src={`${process.env.PUBLIC_URL}/images/Calendar.svg`}
-                alt="back"
-              />
+              <img id="clock" src={`${process.env.PUBLIC_URL}/images/Calendar.svg`} alt="back" />
               9:00 - 12:00 AM
             </H.C_inform>
           </H.C_wrapper>
@@ -110,26 +82,15 @@ const Hospital = () => {
           <div>홈페이지</div>
         </H.Comp>
         <H.Comp>
-          <img
-            src={`${process.env.PUBLIC_URL}/images/search_b.svg`}
-            alt="search"
-          />
+          <img src={`${process.env.PUBLIC_URL}/images/search_b.svg`} alt="search" />
           <div>진단하기</div>
         </H.Comp>
         <H.Comp onClick={goAppoint}>
-          <img
-            src={`${process.env.PUBLIC_URL}/images/reser_c.svg`}
-            alt="reservation"
-            style={{ width: "28px", height: "28px" }}
-          />
+          <img src={`${process.env.PUBLIC_URL}/images/reser_c.svg`} alt="reservation" style={{ width: "28px", height: "28px" }} />
           <div>예약하기</div>
         </H.Comp>
         <H.Comp style={{ gap: "7px" }} onClick={goMy}>
-          <img
-            src={`${process.env.PUBLIC_URL}/images/info_b.svg`}
-            alt="info"
-            style={{ width: "21px", height: "21px" }}
-          />
+          <img src={`${process.env.PUBLIC_URL}/images/info_b.svg`} alt="info" style={{ width: "21px", height: "21px" }} />
           <div>내 정보</div>
         </H.Comp>
       </H.Nav>
