@@ -14,7 +14,7 @@ const Appointment_2 = () => {
     <A.Container>
       <A.Header>
         <A.Icons>
-          <img id="back" src={`${process.env.PUBLIC_URL}/images/back.svg`} alt="back" onClick={goBack} />
+          <img id="back" src={`${process.env.PUBLIC_URL}/images/Back.svg`} alt="back" onClick={goBack} />
         </A.Icons>
         <A.Title>예약선택</A.Title>
       </A.Header>

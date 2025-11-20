@@ -16,7 +16,7 @@ const Transport = () => {
     <T.Container>
       <T.Header>
         <T.Icons>
-          <img id="back" src={`${process.env.PUBLIC_URL}/images/back.svg`} alt="back" onClick={goBack} />
+          <img id="back" src={`${process.env.PUBLIC_URL}/images/Back.svg`} alt="back" onClick={goBack} />
         </T.Icons>
         <T.Title>교통편선택</T.Title>
       </T.Header>
@@ -32,7 +32,7 @@ const Transport = () => {
           <T.C_wrapper>
             <T.C_inform>운행시간</T.C_inform>
             <T.C_inform>
-              <img id="clock" src={`${process.env.PUBLIC_URL}/images/clock.svg`} alt="clock" />
+              <img id="clock" src={`${process.env.PUBLIC_URL}/images/Clock.svg`} alt="clock" />
               오전 8시, 오후 1시 출발
             </T.C_inform>
           </T.C_wrapper>
@@ -48,7 +48,7 @@ const Transport = () => {
           <T.C_wrapper>
             <T.C_inform>운행시간</T.C_inform>
             <T.C_inform>
-              <img id="clock" src={`${process.env.PUBLIC_URL}/images/clock.svg`} alt="clock" />
+              <img id="clock" src={`${process.env.PUBLIC_URL}/images/Clock.svg`} alt="clock" />
               예약 후 담당자와 연락
             </T.C_inform>
           </T.C_wrapper>

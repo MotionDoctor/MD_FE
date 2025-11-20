@@ -15,18 +15,18 @@ const Hospital = () => {
     <H.Container>
       <H.Header>
         <H.Icons>
-          <img id="back" src={`${process.env.PUBLIC_URL}/images/back.svg`} alt="back" onClick={goBack} />
+          <img id="back" src={`${process.env.PUBLIC_URL}/images/Back.svg`} alt="back" onClick={goBack} />
         </H.Icons>
         <H.Title>병원선택</H.Title>
       </H.Header>
 
       <H.Content>
         <H.Component>
-          <H.C_title>경북대학교병원</H.C_title>
+          <H.C_title>경북대학교 병원</H.C_title>
           <H.C_sub>정형외과</H.C_sub>
           <H.C_wrapper>
             <H.C_inform>
-              <img id="clock" src={`${process.env.PUBLIC_URL}/images/clock.svg`} alt="back" />
+              <img id="clock" src={`${process.env.PUBLIC_URL}/images/Clock.svg`} alt="back" />
               9월 20일
             </H.C_inform>
             <H.C_inform>
@@ -45,7 +45,7 @@ const Hospital = () => {
           <H.C_sub>재활의학과</H.C_sub>
           <H.C_wrapper>
             <H.C_inform>
-              <img id="clock" src={`${process.env.PUBLIC_URL}/images/clock.svg`} alt="back" />
+              <img id="clock" src={`${process.env.PUBLIC_URL}/images/Clock.svg`} alt="back" />
               9월 20일
             </H.C_inform>
             <H.C_inform>
@@ -62,7 +62,7 @@ const Hospital = () => {
           <H.C_sub>가정의학과</H.C_sub>
           <H.C_wrapper>
             <H.C_inform>
-              <img id="clock" src={`${process.env.PUBLIC_URL}/images/clock.svg`} alt="back" />
+              <img id="clock" src={`${process.env.PUBLIC_URL}/images/Clock.svg`} alt="back" />
               9월 27일
             </H.C_inform>
             <H.C_inform>
