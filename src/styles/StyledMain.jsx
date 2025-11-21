@@ -45,7 +45,7 @@ export const Mention = styled.div`
   font-style: normal;
   font-weight: 700;
   line-height: 33px; /* 132% */
-  margin-top: 80px;
+  margin-top: 50px;
   margin-bottom: 11px;
 `;
 
