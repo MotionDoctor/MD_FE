@@ -33,7 +33,9 @@ const Ing = () => {
 
       <I.Title>회전근개 파열</I.Title>
 
-      <I.Img></I.Img>
+      <I.Img>
+        <img src={`${process.env.PUBLIC_URL}/images/Gif.gif`} alt="gif" />
+      </I.Img>
 
       <I.Box>
         <div>

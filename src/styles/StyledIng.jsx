@@ -65,6 +65,11 @@ export const Img = styled.div`
   width: 323px;
   aspect-ratio: 323/339;
   background-color: #232323;
+
+  img {
+    height: 339px;
+    width: 323px;
+  }
 `;
 
 export const Box = styled.div`
