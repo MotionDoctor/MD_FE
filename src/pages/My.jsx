@@ -1,15 +1,68 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import * as M from "../styles/StyledMy";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const My = () => {
   const navigate = useNavigate();
+  const [nickname, setNickname] = useState(""); // 사용자 닉네임 상태 추가
 
   const goAppoint = () => navigate(`/appointment`);
   const goHome = () => navigate(`/home`);
   const goBack = () => navigate(-1);
   const goMy = () => navigate(`/my`);
   const goDiag = () => navigate(`/diagnosis`);
+
+  const handleLogout = async () => {
+    const accessToken = localStorage.getItem("access_token");
+
+    try {
+      await axios.post(
+        "http://133.186.132.40:8000/v1/auth/logout",
+        {}, // POST body는 비어 있어도 됩니다
+        {
+          headers: {
+            Authorization: `Bearer ${accessToken}`,
+          },
+        }
+      );
+
+      // 로컬스토리지 정리
+      localStorage.removeItem("access_token");
+      localStorage.removeItem("refresh_token");
+
+      // 홈으로 이동
+      navigate("/");
+    } catch (error) {
+      console.error("로그아웃 실패:", error);
+      alert("로그아웃에 실패했습니다.");
+    }
+  };
+
+  // ✅ 사용자 정보 조회 함수
+  const fetchUserInfo = async () => {
+    const accessToken = localStorage.getItem("access_token");
+
+    try {
+      const response = await axios.get(
+        "http://133.186.132.40:8000/v1/auth/me",
+        {
+          headers: {
+            Authorization: `Bearer ${accessToken}`,
+          },
+        }
+      );
+
+      setNickname(response.data.nickname); // 응답에서 닉네임 추출
+    } catch (error) {
+      console.error("사용자 정보 조회 실패:", error);
+    }
+  };
+
+  // ✅ 페이지 로드 시 사용자 정보 가져오기
+  useEffect(() => {
+    fetchUserInfo();
+  }, []);
 
   return (
     <M.Container>
@@ -25,7 +78,7 @@ const My = () => {
 
       <M.Me>
         <img src={`${process.env.PUBLIC_URL}/images/my.svg`} alt="prof" />
-        <div>김수현</div>
+        <div>{nickname ? nickname : "불러오는 중..."}</div>
       </M.Me>
 
       <M.Tit>진단 기록</M.Tit>
@@ -71,6 +124,8 @@ const My = () => {
           <div id="time">오전 8시</div>
         </M.Date>
       </M.History>
+
+      <M.Logout onClick={handleLogout}>로그아웃</M.Logout>
 
       <M.Nav>
         <M.Comp onClick={goHome}>

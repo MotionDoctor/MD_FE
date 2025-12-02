@@ -292,3 +292,22 @@ export const Comp = styled.div`
     font-weight: 700;
   }
 `;
+
+export const Logout = styled.div`
+  display: flex;
+  height: 53px;
+  width: 295px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: #002159;
+  color: #fff;
+  font-family: "Gmarket Sans TTF";
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%; /* 22px */
+  margin-top: 60px;
+`;
