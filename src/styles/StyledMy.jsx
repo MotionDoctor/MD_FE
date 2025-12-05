@@ -296,7 +296,7 @@ export const Comp = styled.div`
 export const Logout = styled.div`
   display: flex;
   height: 53px;
-  width: 295px;
+  width: 202px;
   justify-content: center;
   align-items: center;
   gap: 10px;
@@ -309,5 +309,5 @@ export const Logout = styled.div`
   font-style: normal;
   font-weight: 700;
   line-height: 110%; /* 22px */
-  margin-top: 60px;
+  margin-top: 45px;
 `;
