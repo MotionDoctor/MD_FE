@@ -10,6 +10,7 @@ const Appointment = () => {
   const goBack = () => navigate(-1);
   const goMy = () => navigate(`/my`);
   const goTransport = () => navigate(`/appointment/transport`);
+  const goDiag = () => navigate(`/diagnosis`);
 
   return (
     <A.Container>
@@ -63,7 +64,7 @@ const Appointment = () => {
           <img src={`${process.env.PUBLIC_URL}/images/home_b.svg`} alt="home" />
           <div>홈페이지</div>
         </A.Comp>
-        <A.Comp>
+        <A.Comp onClick={goDiag}>
           <img src={`${process.env.PUBLIC_URL}/images/search_b.svg`} alt="search" />
           <div>진단하기</div>
         </A.Comp>
