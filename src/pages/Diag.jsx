@@ -1,15 +1,48 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import * as D from "../styles/StyledDiag";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const Diag = () => {
   const navigate = useNavigate();
+  const [templates, setTemplates] = useState([]);
 
   const goAppoint = () => navigate(`/appointment`);
   const goHome = () => navigate(`/home`);
   const goBack = () => navigate(-1);
   const goMy = () => navigate(`/my`);
   const goIng = () => navigate(`/diagnosis/ing`);
+
+  useEffect(() => {
+    const fetchTemplates = async () => {
+      try {
+        const res = await axios.get(
+          "http://133.186.132.40:8000/v1/diagnosis/templates"
+        );
+        const filtered = res.data.templates.filter((item) => item.id <= 4);
+        setTemplates(filtered);
+      } catch (error) {
+        console.error("API 호출 오류:", error);
+      }
+    };
+    fetchTemplates();
+  }, []);
+
+  // 아이콘에 맞게 이미지 파일명을 설정하는 함수
+  const getImageFile = (icon) => {
+    switch (icon) {
+      case "shoulder":
+        return "shoulder.png";
+      case "joint":
+        return "knee.png";
+      case "spine":
+        return "vert.png";
+      case "back":
+        return "lumbar.png";
+      default:
+        return "default.png";
+    }
+  };
 
   return (
     <D.Container>
@@ -23,85 +56,25 @@ const Diag = () => {
         <div id="detail">진단선택</div>
       </D.Header>
 
-      <D.Btn>
-        <img
-          src={`${process.env.PUBLIC_URL}/images/shoulder.png`}
-          alt="회전근개"
-          id="img1"
-        />
-        <D.Det>
-          <D.Text>
-            <div id="name">회전근개 파열</div>
-            <div id="detail">어깨를 들거나 옆으로 벌릴때 통증이 있어요</div>
-          </D.Text>
-          <D.Button onClick={goIng}>
-            <div>진단 받기</div>
-            <img src={`${process.env.PUBLIC_URL}/images/Go.svg`} alt="go" />
-          </D.Button>
-        </D.Det>
-      </D.Btn>
-
-      <D.Btn>
-        <img
-          src={`${process.env.PUBLIC_URL}/images/knee.png`}
-          alt="회전근개"
-          id="img1"
-        />
-        <D.Det>
-          <D.Text>
-            <div id="name">퇴행성 관절염</div>
-            <div id="detail">
-              무릎이 아프고 뻣뻣하며, 계단 오르내릴때 힘들어요
-            </div>
-          </D.Text>
-          <D.Button onClick={goIng}>
-            <div>진단 받기</div>
-            <img src={`${process.env.PUBLIC_URL}/images/Go.svg`} alt="go" />
-          </D.Button>
-        </D.Det>
-      </D.Btn>
-
-      <D.Btn>
-        <img
-          src={`${process.env.PUBLIC_URL}/images/vert.png`}
-          alt="회전근개"
-          id="img1"
-        />
-        <D.Det>
-          <D.Text>
-            <div id="name">척추관 협착</div>
-            <div id="detail">
-              서 있거나 걸을때 다리가 저리고 아프며, 허리를 굽히면 증상이 잠깐
-              완화돼요
-            </div>
-          </D.Text>
-          <D.Button onClick={goIng}>
-            <div>진단 받기</div>
-            <img src={`${process.env.PUBLIC_URL}/images/Go.svg`} alt="go" />
-          </D.Button>
-        </D.Det>
-      </D.Btn>
-
-      <D.Btn>
-        <img
-          src={`${process.env.PUBLIC_URL}/images/lumbar.png`}
-          alt="회전근개"
-          id="img2"
-        />
-        <D.Det>
-          <D.Text>
-            <div id="name">요추 디스크 탈출증</div>
-            <div id="detail">
-              서 있거나 걸을때 다리가 저리고 아프며, 허리를 굽히면 증상이 잠깐
-              완화돼요
-            </div>
-          </D.Text>
-          <D.Button onClick={goIng}>
-            <div>진단 받기</div>
-            <img src={`${process.env.PUBLIC_URL}/images/Go.svg`} alt="go" />
-          </D.Button>
-        </D.Det>
-      </D.Btn>
+      {templates.map((item) => (
+        <D.Btn key={item.id}>
+          <img
+            src={`${process.env.PUBLIC_URL}/images/${getImageFile(item.icon)}`}
+            alt={item.name}
+            id="img1"
+          />
+          <D.Det>
+            <D.Text>
+              <div id="name">{item.name}</div>
+              <div id="detail">{item.description}</div>
+            </D.Text>
+            <D.Button onClick={goIng}>
+              <div>진단 받기</div>
+              <img src={`${process.env.PUBLIC_URL}/images/Go.svg`} alt="go" />
+            </D.Button>
+          </D.Det>
+        </D.Btn>
+      ))}
 
       <D.Nav>
         <D.Comp onClick={goHome}>
